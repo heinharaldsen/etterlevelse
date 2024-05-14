@@ -1,0 +1,296 @@
+type Krav {
+    id: ID!
+    changeStamp: ChangeStamp!
+    version: Int!
+
+    kravNummer: Int!
+    kravVersjon: Int!
+    navn: String!
+    beskrivelse: String
+    hensikt: String
+    utdypendeBeskrivelse: String
+    versjonEndringer: String
+    dokumentasjon: [String!]!
+    notat: String
+    varselMelding: String
+    implementasjoner: String
+    begrepIder: [String!]!
+    virkemiddelIder: [String!]!
+    rettskilder: [String!]!
+    tagger: [String!]!
+    regelverk: [Regelverk!]!
+    varslingsadresser: [Varslingsadresse!]!
+    suksesskriterier: [Suksesskriterie!]!
+
+    avdeling: Code
+    underavdeling: Code
+    relevansFor: [Code!]!
+    status: KravStatus!
+    prioriteringsId: Int!
+
+    etterlevelser(onlyForEtterlevelseDokumentasjon: Boolean, etterlevelseDokumentasjonId: ID): [Etterlevelse!]!
+    tilbakemeldinger: [Tilbakemelding!]!
+    begreper: [Begrep!]!
+    virkemidler: [Virkemiddel!]!
+    kravIdRelasjoner: [String!]!
+    kravRelasjoner: [Krav!]!
+    aktivertDato: DateTime
+}
+
+type Begrep {
+    id: ID!
+    navn: String!
+    beskrivelse:String!
+}
+
+type Virkemiddel {
+    id: ID!
+    changeStamp: ChangeStamp!
+    version: Int!
+    navn: String!
+    virkemiddelType: Code!
+    regelverk: [Regelverk!]!
+
+}
+
+type Tilbakemelding {
+    id: ID!
+    changeStamp: ChangeStamp!
+    version: Int!
+
+    kravNummer: Int!
+    kravVersjon: Int!
+
+    tittel: String!
+    type:TilbakemeldingsType!
+    melderIdent: String!
+    meldinger: [Melding!]!
+}
+
+enum TilbakemeldingsType {
+    GOD,
+    UKLAR,
+    ANNET
+}
+
+type Melding {
+    meldingNr: NonNegativeInt!
+    fraIdent: String!
+    rolle: Rolle!
+    tid: DateTime!
+    innhold: String!
+}
+
+enum Rolle {
+    KRAVEIER,
+    MELDER
+}
+
+type Suksesskriterie {
+    id: NonNegativeInt!
+    navn: String!
+    beskrivelse: String
+    behovForBegrunnelse: Boolean
+}
+
+type Regelverk {
+    lov: Code!
+    spesifisering: String
+}
+
+enum KravStatus {
+    UTKAST,
+    UNDER_ARBEID,
+    AKTIV,
+    UTGAATT
+}
+
+type Varslingsadresse {
+    adresse: String!
+    type: AdresseType!
+    slackChannel: SlackChannel
+    slackUser: SlackUser
+}
+
+enum AdresseType {
+    EPOST,
+    SLACK,
+    SLACK_USER
+}
+
+type SlackChannel {
+    id: String!
+    name: String
+    numMembers: NonNegativeInt
+}
+
+type SlackUser {
+    id: String!
+    name: String
+}
+
+type Etterlevelse {
+    id: ID!
+    changeStamp: ChangeStamp!
+    version: Int!
+
+    behandlingId: String
+    etterlevelseDokumentasjonId: String
+    etterlevelseDokumentasjon: EtterlevelseDokumentasjon
+    kravNummer: Int!
+    kravVersjon: Int!
+
+    etterleves: Boolean
+    statusBegrunnelse: String
+    dokumentasjon: [String!]!
+    fristForFerdigstillelse: Date
+    status: EtterlevelseStatus
+    suksesskriterieBegrunnelser: [SuksesskriterieBegrunnelse]
+}
+
+type SuksesskriterieBegrunnelse {
+    suksesskriterieId: Int!
+    begrunnelse: String
+    suksesskriterieStatus: SuksesskriterieStatus
+}
+
+enum EtterlevelseStatus {
+    UNDER_REDIGERING,
+    FERDIG,
+    OPPFYLLES_SENERE,
+    IKKE_RELEVANT,
+    FERDIG_DOKUMENTERT,
+    IKKE_RELEVANT_FERDIG_DOKUMENTERT
+}
+
+enum SuksesskriterieStatus {
+    UNDER_ARBEID,
+    OPPFYLT,
+    IKKE_RELEVANT,
+    IKKE_OPPFYLT
+}
+
+type Behandling {
+    id: String!
+    navn: String!
+    nummer: Int!
+
+    overordnetFormaal: ExternalCode!
+    formaal: String
+
+    avdeling: ExternalCode
+    linjer: [ExternalCode!]!
+    systemer: [ExternalCode!]!
+    teams: [String!]!
+    teamsData: [Team!]!
+}
+
+type EtterlevelseDokumentasjonStats {
+    relevantKrav: [Krav!]!
+    irrelevantKrav: [Krav!]!
+    utgaattKrav: [Krav!]!
+    lovStats: [LovStats!]!
+}
+
+type EtterlevelseDokumentasjon {
+    id: String!
+    changeStamp: ChangeStamp!
+    version: Int!
+    title: String!
+    etterlevelseNummer: Int!
+    behandlingIds: [String!]!
+    behandlinger: [Behandling!]!
+    behandlerPersonopplysninger: Boolean
+    knyttetTilVirkemiddel: Boolean
+    virkemiddelId: String
+    irrelevansFor: [Code!]!
+    knytteTilTeam: Boolean
+    teams: [String!]!
+    teamsData: [Team!]!
+    etterlevelser: [Etterlevelse!]!
+    sistEndretEtterlevelse: DateTime
+    sistEndretDokumentasjon: DateTime
+    stats: EtterlevelseDokumentasjonStats!
+}
+
+type LovStats {
+    lovCode: Code!
+    relevantKrav: [Krav!]!
+    irrelevantKrav: [Krav!]!
+    utgaattKrav: [Krav!]!
+}
+
+type Team {
+    id: String!
+    name: String
+    description: String
+    slackChannel: String
+    productAreaId: String
+    productAreaName: String
+    tags: [String!]
+    members: [Member!]
+}
+
+type Member {
+    navIdent: String!
+    name: String
+    email: String
+}
+
+type ChangeStamp {
+    createdDate: DateTime!
+    lastModifiedBy: String!
+    lastModifiedDate: DateTime!
+}
+
+type Code {
+    list: ListName!
+    code: String!
+    shortName: String!
+    description: String
+    invalidCode: Boolean
+}
+
+type ExternalCode {
+    list: String!
+    code: String!
+    shortName: String!
+    description: String
+    external: Boolean
+}
+
+enum ListName {
+    RELEVANS
+    AVDELING
+    UNDERAVDELING
+}
+
+type BehandlingPage {
+    pageNumber: Int!
+    pageSize: Int!
+    pages: Int!
+    numberOfElements: Int!
+    totalElements: Int!
+    paged: Boolean
+    content: [Behandling!]!
+}
+
+type EtterlevelseDokumentasjonPage {
+    pageNumber: Int!
+    pageSize: Int!
+    pages: Int!
+    numberOfElements: Int!
+    totalElements: Int!
+    paged: Boolean
+    content: [EtterlevelseDokumentasjon!]!
+}
+
+type KravPage {
+    pageNumber: Int!
+    pageSize: Int!
+    pages: Int!
+    numberOfElements: Int!
+    totalElements: Int!
+    paged: Boolean
+    content: [Krav!]!
+}

@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:12
+    restart: always
+    environment:
+      - POSTGRES_DB=etterlevelsedb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+
+volumes:
+  postgres:

@@ -1,0 +1,26 @@
+ingresses:
+  - https://etterlevelse-api.intern.dev.nav.no
+replies:
+  - https://etterlevelse-api.intern.dev.nav.no/oauth2/callback
+  - https://etterlevelse.ansatt.dev.nav.no/oauth2/callback
+  - https://etterlevelse.intern.dev.nav.no/oauth2/callback
+  - http://localhost:8080/oauth2/callback
+  - http://localhost:3000/oauth2/callback
+teamcat_ingress: teamkatalog-api.intern.dev.nav.no
+env:
+  - name: ETTERLEV_SECURITY_REDIRECT_URIS
+    value: https://etterlevelse.ansatt.dev.nav.no,https://etterlevelse.intern.dev.nav.no,https://etterlevelse-api.intern.dev.nav.no,http://localhost:3000
+  - name: CLIENT_TEAMCAT_URL
+    value: https://teamkatalog-api.intern.dev.nav.no
+  - name: CLIENT_TEAMCAT_FRONTEND_URL
+    value: https://teamkatalog.intern.nav.no/
+  - name: CLIENT_POLLY_URL
+    value: http://behandlingskatalog-backend.teamdatajegerne
+  - name: AZURE_CLIENT_GROUPS
+    value: 7d275d5e-59a5-473d-b530-a9091b3de4c6
+  - name: AZURE_CLIENT_GROUPS_ADMIN
+    value: bf05a29f-6f80-4da1-b419-22c802fd41e7
+  - name: AZURE_CLIENT_GROUPS_KRAVEIER
+    value: d99d875c-c028-46a4-94bc-a87a633b3eee
+  - name: CLIENT_BEGREPSKATALOG_FRONTEND_URL
+    value: https://begrepskatalog.intern.nav.no/begrep

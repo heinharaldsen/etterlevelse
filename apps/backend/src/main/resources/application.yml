@@ -1,0 +1,126 @@
+
+DB_DATABASE: postgres
+DB_HOST: localhost
+DB_PASSWORD: password
+DB_PORT: 5433
+DB_USERNAME: postgres
+
+management:
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: false
+    prometheus:
+      enabled: true
+    security:
+      enabled: false
+  endpoints:
+    web:
+      base-path: /internal
+      exposure:
+        include: info,health,prometheus
+      path-mapping:
+        prometheus: metrics
+  info:
+    git:
+      mode: simple
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
+server:
+  error:
+    include-message: always
+  port: 8080
+  shutdown: graceful
+spring:
+  datasource:
+    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}
+    username: ${DB_USERNAME}
+  flyway:
+    baseline-on-migrate: true
+    schemas: public
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  main:
+    cloud-platform: kubernetes
+    #midlertidig løsning, må fjernes når objectMapperProver er løst mellom springdoc-api og graphql
+    allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 5MB
+      max-request-size: 20MB
+  codec:
+    max-in-memory-size: 5MB
+
+springdoc:
+  api-docs:
+    path: /swagger-docs
+  swagger-ui:
+    path: /swagger-ui
+    disable-swagger-default-url: true
+  packages-to-scan: no.nav.data
+  paths-to-exclude: /error, /internal/**
+
+azure:
+  activedirectory:
+    allowed-app-id-mappings: ${AZURE_APP_PRE_AUTHORIZED_APPS:[{"clientId":"appId","name":"thisapp"},{"clientId":"appId2","name":"otherapp"}]}
+    client-id: ${AZURE_APP_CLIENT_ID:client-id}
+    client-secret: ${AZURE_APP_CLIENT_SECRET:client-secret}
+    well-known: ${AZURE_APP_WELL_KNOWN_URL:https://login.microsoftonline.com/62366534-1ec3-4962-8869-9b5535279d0b/v2.0/.well-known/openid-configuration}
+    mail-user: srvetterlevelse@nav.no
+    mail-password: ${AZURE_APP_MAIL_PASSWORD:mail-password}
+
+etterlev:
+  security:
+    admin-groups: ${AZURE_CLIENT_GROUPS_ADMIN:teamdatajegerne}
+    enc-key: ${AZURE_TOKEN_ENC_KEY:tokenkey}
+    env: ${NAIS_CLUSTER_NAME:local}
+    kraveier-groups: ${AZURE_CLIENT_GROUPS_KRAVEIER:teamdatajegerne}
+    redirectUris: http://localhost:3000
+    write-groups: ${AZURE_CLIENT_GROUPS:teamdatajegerne}
+
+graphql:
+  servlet:
+    corsEnabled: false
+    maxQueryDepth: 50
+    exception-handlers-enabled: true
+  playground:
+    tabs:
+      - name: Get krav for filter
+        query: classpath:playground/get_krav.graphql
+      - name: Get krav for nummer
+        query: classpath:playground/get_krav_for_nummer.graphql
+        variables: classpath:playground/get_krav_for_nummer_variables.json
+    settings:
+      request:
+        credentials: include
+
+client:
+  behandlingskatalog:
+    base-url: ${client.polly.url:https://something}
+  teamcat:
+    product-areas-url: ${client.teamcat.url}/productarea
+    resource-search-url: ${client.teamcat.url}/resource/search/{searchTerm}
+    resource-url: ${client.teamcat.url}/resource/{ident}
+    resource-photo-url: ${client.teamcat.url}/resource/{ident}/photo
+    resources-url: ${client.teamcat.url}/resource/multi
+    teams-url: ${client.teamcat.url}/team
+    url: https://teamcat/api
+  slack:
+    base-url: https://slack.com/api
+    token: ${SLACK_TOKEN:token}

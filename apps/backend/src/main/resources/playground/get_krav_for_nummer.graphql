@@ -1,0 +1,15 @@
+query getKravById($nummer: Int!, $versjon: Int!) {
+    kravById(nummer: $nummer, versjon: $versjon) {
+        id
+        navn
+        etterlevelser {
+            id
+            statusBegrunnelse
+            behandlingId
+            behandling {
+                navn
+                nummer
+            }
+        }
+    }
+}

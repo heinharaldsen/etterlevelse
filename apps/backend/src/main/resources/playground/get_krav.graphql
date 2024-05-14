@@ -1,0 +1,23 @@
+query getKravByFilter {
+    krav(filter: {relevans: ["INTERN_SKJERMFLATE"], nummer: null}) {
+        id
+        navn
+        varslingsadresser {
+            adresse
+            type
+            slackChannel {
+                id
+                name
+            }
+        }
+        etterlevelser {
+            id
+            statusBegrunnelse
+            behandlingId
+            behandling {
+                navn
+                nummer
+            }
+        }
+    }
+}
