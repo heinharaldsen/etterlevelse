@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d9794ec-5988-4200-bcd1-e9b57f01ca1f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/nav/data/common/security/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/nav/data/common/security/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/no/nav/data/common/security/azure/AzureUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/no/nav/data/common/security/azure/AzureUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/etterlevelseDokumentasjon/KravAccordionList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/etterlevelseDokumentasjon/KravAccordionList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/kravList/TemaList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/kravList/TemaList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/DokumentasjonPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/DokumentasjonPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/TemaPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/TemaPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/User.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.intellij.jpb.FlywayMigrationScript" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2gBCbF4tiu3MgZRCcbt2NwG1JsK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LocalAppStarter.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.LocalAppStarter">
+    <configuration name="LocalAppStarter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="no.nav.data.LocalAppStarter" />
+      <module name="etterlevelse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.nav.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="etterlevelse" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="no.nav.data.AppStarter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LocalAppStarter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d9794ec-5988-4200-bcd1-e9b57f01ca1f" name="Changes" comment="" />
+      <created>1715161653392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715161653392</updated>
+      <workItem from="1715588046691" duration="121000" />
+      <workItem from="1715588471553" duration="25734000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/nav/data/common/security/AuthController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/nav/data/common/security/AuthController.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/nav/data/common/security/AuthController.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/nav/data/etterlevelse/kravprioritylist/KravPriorityListController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/nav/data/etterlevelse/kravprioritylist/KravPriorityListController.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/nav/data/etterlevelse/kravprioritylist/KravPriorityListService.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/no/nav/data/common/security/AuthController.java</url>
+          <line>64</line>
+          <properties class="no.nav.data.common.security.AuthController" method="login">
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

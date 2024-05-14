@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3a7016d-09b5-4315-aec0-f66fe41bd9e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/no/nav/data/common/security/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/no/nav/data/common/security/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/no/nav/data/common/security/azure/AzureUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/no/nav/data/common/security/azure/AzureUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/etterlevelseDokumentasjon/KravAccordionList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/etterlevelseDokumentasjon/KravAccordionList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/kravList/TemaList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/kravList/TemaList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DokumentasjonPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/DokumentasjonPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TemaPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TemaPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/User.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2gBD6y8GC9JQTvONXMmtdyPLj9o" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/hein/projects/etterlevelse/apps/frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/hein/projects/etterlevelse/apps/frontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3a7016d-09b5-4315-aec0-f66fe41bd9e0" name="Changes" comment="" />
+      <created>1715161908659</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715161908659</updated>
+      <workItem from="1715584475800" duration="3316000" />
+      <workItem from="1715588255797" duration="22439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/util/PrivateRoute.tsx</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
